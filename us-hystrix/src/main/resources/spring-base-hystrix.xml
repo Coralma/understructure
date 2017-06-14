@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--<context:property-placeholder location="classpath*:hystrix.properties"/>-->
+
+    <bean id="hystrixSetter" class="com.cccis.base.hystrix.HystrixSetter">
+        <property name="defaultCacheEnable" value="${hystrix.defaultCacheEnable}"></property>
+        <property name="defaultTimeout" value="${hystrix.defaultTimeout}"></property>
+        <property name="defaultMetricsHealthSnapshotIntervalInMilliseconds" value="${hystrix.defaultMetricsHealthSnapshotIntervalInMilliseconds}"></property>
+        <property name="defaultCircuitBreakerRequestVolumeThreshold" value="${hystrix.defaultCircuitBreakerRequestVolumeThreshold}"></property>
+        <property name="defaultCircuitBreakerSleepWindowInMilliseconds" value="${hystrix.defaultCircuitBreakerSleepWindowInMilliseconds}"></property>
+        <property name="defaultCircuitBreakerForceOpen" value="${hystrix.defaultCircuitBreakerForceOpen}"></property>
+        <property name="defaultExecutionIsolationSemaphoreMaxConcurrentRequests" value="${hystrix.defaultExecutionIsolationSemaphoreMaxConcurrentRequests}"></property>
+        <property name="defaultFallbackIsolationSemaphoreMaxConcurrentRequests" value="${hystrix.defaultFallbackIsolationSemaphoreMaxConcurrentRequests}"></property>
+        <property name="defaultCorePoolSize" value="${hystrix.defaultCorePoolSize}"></property>
+        <property name="defaultMaxQueueSize" value="${hystrix.defaultMaxQueueSize}"></property>
+
+        <!--<property name="defaultCacheEnable" value="false"></property>
+        <property name="defaultTimeout" value="1800000"></property>
+        <property name="defaultMetricsHealthSnapshotIntervalInMilliseconds" value="10000"></property>
+        <property name="defaultCircuitBreakerRequestVolumeThreshold" value="50"></property>
+        <property name="defaultCircuitBreakerSleepWindowInMilliseconds" value="100000"></property>
+        <property name="defaultCircuitBreakerForceOpen" value="false"></property>
+        <property name="defaultExecutionIsolationSemaphoreMaxConcurrentRequests" value="500"></property>
+        <property name="defaultFallbackIsolationSemaphoreMaxConcurrentRequests" value="50"></property>
+        <property name="defaultCorePoolSize" value="10"></property>
+        <property name="defaultMaxQueueSize" value="-1"></property>-->
+    </bean>
+</beans>
