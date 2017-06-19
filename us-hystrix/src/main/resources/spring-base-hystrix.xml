@@ -6,7 +6,7 @@
 
     <!--<context:property-placeholder location="classpath*:hystrix.properties"/>-->
 
-    <bean id="hystrixSetter" class="com.cccis.base.hystrix.HystrixSetter">
+    <bean id="hystrixSetter" class="com.coral.base.hystrix.HystrixSetter">
         <property name="defaultCacheEnable" value="${hystrix.defaultCacheEnable}"></property>
         <property name="defaultTimeout" value="${hystrix.defaultTimeout}"></property>
         <property name="defaultMetricsHealthSnapshotIntervalInMilliseconds" value="${hystrix.defaultMetricsHealthSnapshotIntervalInMilliseconds}"></property>

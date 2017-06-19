@@ -27,7 +27,7 @@
           p:port="${redis.port}"
           p:poolConfig-ref="poolConfig"/>
 
-    <bean id="sessionGenerator" class="com.cccis.base.session.data.SessionGenerator" scope="prototype">
+    <bean id="sessionGenerator" class="com.coral.base.session.data.SessionGenerator" scope="prototype">
         <constructor-arg ref="sessionRepository"/>
     </bean>
 </beans>
